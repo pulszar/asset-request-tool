@@ -9,30 +9,22 @@ from openpyxl import load_workbook
 
 dup_email_template = """Hello {name},
 
-This is [insert name] from IT. I am working on a project to update our machine asset records and am seeking information on the {type} with machine name {machine}.
+This is a sample message requesting information about the {type} name {machine}.
 
 If available, I will need two pieces of information:
 
 1. Exact location, down to cube or office if possible (e.g., ...)
 2. User of the computer
-      - If you are the primary/personal user of this device, please confirm this
-      - If you know the primary/personal user of this device, please list the name
-      - If this is a shared computer, give the group it is shared by, e.g., department or office, and if there is a standard login name used
 
-If you have any questions about this process, please let me know.
-
-Thank you in advance for your assistance!"""
+Thank you!"""
 
 email_template = """Hello {name},
 
-This is [insert name] from IT. I am working on a project to update our machine asset records and am seeking information on the {type} with machine name {machine}.
+This is a sample message requesting information about the {type} name {machine}.
 
-If available, please fill out this short form that asks a couple quick questions clarifying the location and user of the computer: [insert form link]
+If available, please fill out this short form that confirms the location and user of the computer: [insert form link]
 
-
-If you have any questions about this process, please let me know.
-
-Thank you in advance for your assistance!"""
+Thank you!"""
 
 df = pd.read_excel('data.xlsx')
 wb = load_workbook('data.xlsx')
@@ -53,9 +45,6 @@ def generate_emails():
             continue
         # if index > end - 1: 
         #     break
-
-        # if row['Missing info?'] == 1 or row['Sent?'] == 1 or row['Dont email/complete?']== 1:
-        #     continue
 
         logon_name = row['Last login']
         logon_name_raw = row['Last login']
