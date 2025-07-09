@@ -85,11 +85,11 @@ def generate_emails():
             continue
 
 
-    #     ws.cell(row=index+2, column=final_email_col, value=email_final)
+        ws.cell(row=index+2, column=final_email_col, value=email_final)
     # print(sorted(users, key=users.get, reverse=True))
     # print(sorted(users.items(), key=lambda x: x[1], reverse=True))
 
-    # wb.save('ad_cleanup-workingdoc.xlsx')
+    wb.save('data.xlsx')
 
 generate_emails()
 
