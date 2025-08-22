@@ -1,8 +1,13 @@
-# Asset Request Tool
+# asset-request-tool
 
 This script generates personalized email address to aid in the collection of hardware information
 
-# Features
+## Usage
+1) Download or clone this repo
+2) Have a `data.xlsx` containing the users name, machine name, and machine type
+3) Edit the email templates as needed and run the script
+
+## Features
 
 - Takes in an Excel spreadsheet and parses it using pandas and openpyxl
 - Generates email templates based on login data and machine data from the Excel data
