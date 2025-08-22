@@ -4,7 +4,7 @@ This script generates personalized email address to aid in the collection of har
 
 ## Usage
 1) Download or clone this repo
-2) Have a `data.xlsx` containing the users name, machine name, and machine type
+2) Have a `data.xlsx` containing a `user`, `machine` (machine name), and `type` (machine type)
 3) Edit the email templates as needed and run the script
 
 ## Features
